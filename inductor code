@@ -1,0 +1,15 @@
+
+const int inductorPin = 34; 
+int sensorValue = 0;
+
+void setup() {
+  Serial.begin(115200);
+  pinMode(inductorPin, INPUT);
+}
+
+void loop() {
+  sensorValue = analogRead(inductorPin); 
+  Serial.print("Inductor Voltage Reading: ");
+  Serial.println(sensorValue);
+  delay(200);
+}
